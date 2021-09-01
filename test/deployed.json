@@ -1,0 +1,11 @@
+{
+    "mainnet":{
+
+    },
+    "rinkeby":{
+        "USDT":"0x2D74888EEa611325d7aDd716ECE53968c89922A3"
+    },
+    "mumbai":{
+        "USDT":"0x2D74888EEa611325d7aDd716ECE53968c89922A3"
+    }
+}
