@@ -7,5 +7,8 @@
     },
     "mumbai":{
         "USDT":"0x2D74888EEa611325d7aDd716ECE53968c89922A3"
+    },
+    "arbitrumTestnet":{
+        "USDT":"0xa8186E3cEAe6e7425A59C99AC2CDb69b33a6a53f"
     }
 }

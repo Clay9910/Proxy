@@ -52,6 +52,14 @@ module.exports = {
       timeoutBlocks: 100000000,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
+    arbitrumTest: {
+      provider: myProvider("arbitrumTest"),
+      network_id: 421611,       // Ropsten's id
+      gas: 5500000,        // Ropsten has a lower block limit than mainnet
+      confirmations: 1,    // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 100000000,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
+    },
   },
 
   // Set default mocha options here, use special reporters etc.
@@ -87,6 +95,8 @@ function myProvider(network) {
       return new HDWalletProvider(mnemonic, `https://rpc-mainnet.matic.network`);
     } else if (network == "mumbai") {
       return new HDWalletProvider(mnemonic, `https://mumbai-dagger.matic.today`);
+    }else if (network == "arbitrumTest") {
+      return new HDWalletProvider(mnemonic, `https://rinkeby.arbitrum.io/rpc`);
     }else {
       return new HDWalletProvider(
         "",
