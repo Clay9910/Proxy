@@ -59,7 +59,7 @@ contract Proxy is Ownable {
 
     event Lock(address indexed user, address indexed asset, address indexed relayer, uint deadline);
 
-    event DepositForRelayer(address indexed asset, address indexed user, uint amount, uint deadline, uint chainIDFrom);
+    event DepositForRelayer(address indexed user, address indexed asset, uint amount, uint deadline, uint chainIDFrom);
 
     event HarvestForRealyer(address user, address asset, uint amount, uint reward, uint chainIDTo);
     
@@ -177,7 +177,7 @@ contract Proxy is Ownable {
         info.asset = address(asset);
         info.deadline = deadline;
         info.nonce = nonce;
-        emit DepositForRelayer(info.asset, user, info.amount, info.deadline, info.nonce);
+        emit DepositForRelayer(user, info.asset, info.amount, info.deadline, info.nonce);
     }
 
     //用户提取目标链上的资产，需要提交自己的签名. 目标链接口
