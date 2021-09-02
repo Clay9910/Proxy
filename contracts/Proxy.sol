@@ -137,7 +137,7 @@ contract Proxy is Ownable {
         info.amount = amount;
         info.reward = reward;
         info.deadline = block.timestamp + period;
-        info.nonce = nonces[msg.sender]++;
+        info.nonce = ++nonces[msg.sender];
         info.chainIDTo = chainIDTo;
         info.chainIDFrom = chainID;
         info.depositer = msg.sender;
