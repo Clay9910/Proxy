@@ -1,0 +1,33 @@
+{
+  "name": "Proxy",
+  "version": "1.0.0",
+  "description": "`npm install` ### 编译 `truffle compile` ### 发布 `truffle migrate --network {network}` ### 测试 `truffle test ./test/1.proxy.test.js  --network {network}`",
+  "main": "tool.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.1",
+    "@truffle/hdwallet-provider": "^1.5.0",
+    "bip39": "^3.0.4",
+    "ethereumjs-util": "^7.1.0",
+    "ethereumjs-wallet": "^1.0.1",
+    "ethers": "^5.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikkkko/Proxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikkkko/Proxy/issues"
+  },
+  "homepage": "https://github.com/vikkkko/Proxy#readme"
+}
